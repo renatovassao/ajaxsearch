@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fruits</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <ul>
+        <% for (let b of fruits) { %>
+            <li><%=b.name%></li>
+        <%}%>
+        </ul>
+        <input type="text" id="search">
+        <span>Search result:</span>
+        <span id="result"></span>
+    </body>
+
+    <script>
+        $(document).ready(function() {
+            $("#search").keyup(function() {
+                $.ajax({
+                    url: "/search?q=" + this.value
+                }).done(function(r) {
+                    const fruit = r.data;
+
+                    if (fruit)
+                        $("#result").html(r.data.name);
+                    else
+                        $("#result").html('No fruit found');
+                }).fail(function(err) {
+                    console.error(err); 
+                });;
+            });
+        });
+    </script>
+</html>
