@@ -1,6 +1,6 @@
 # AJAX Search
 
-This project was made to help a fellow programmer in [Stack Overflow](https://stackoverflow.com/questions/55068182/get-request-with-different-mongo-find-results-on-same-page/55071932?noredirect=1#comment96905967_55071932)
+This project was made to help a fellow programmer in [Stack Overflow](https://stackoverflow.com/questions/55068182/get-request-with-different-mongo-find-results-on-same-page/55071932)
 
 ## Installation
 
