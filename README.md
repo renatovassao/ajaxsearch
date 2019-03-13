@@ -25,3 +25,5 @@ To start the express server, run
 ```bash
 node bin/www
 ```
+
+and go to [localhost:3000](localhost:3000) to see the results.
